@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include('../partials/head-sublinks.ejs') %>
+  <body>
+    <%- include('../partials/nav.ejs') %>
+      <div class="blogs content">
+        <h2>All Blogs</h2>
+
+        <% if (admins.length > 0) { %>
+          <% admins.forEach(admin => { %>
+            <a class="single" href="/admin/<%= admin._id %>">
+              <h3 class="title"><%= admin.title %></h3>
+              <p class="snippet"><%= admin.snippet %></p>
+            </a>
+          <% }) %>
+        <% } else { %>
+          <p>There are no blogs to display...</p>
+        <% } %>
+      </div>
+      <section id="footer">
+    <%- include('../partials/footer.ejs') %>
+      </section>
+
+
+    <!--link to javascript file-->
+    <script src="/index.js">
+    </script>
+  </body>
+</html>
