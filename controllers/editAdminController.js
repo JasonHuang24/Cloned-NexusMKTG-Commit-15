@@ -1,14 +1,13 @@
 const EditAdmin = require('../models/editAdmin'); //EditAdmin Section
 
 
-const admin_edit_webpage_get2 = (req, res) => { //remember to export this!
-  res.render('website portfolio/wholesome-food-service', {title: 'Wholesome Food Services'});
-}
-
 
 //order matters must be above :id
 const admin_edit_webpage_get = (req, res) => {
   res.render('blogs/edit-webpage', {title: 'Edit a web page'});
+}
+const admin_edit_webpage_get2 = (req, res) => {
+  res.render('website portfolio/wholesome-food-services', {title: 'Wholesome Food Services'});
 }
 
 const editAdmin_create_post = (req, res) => {
