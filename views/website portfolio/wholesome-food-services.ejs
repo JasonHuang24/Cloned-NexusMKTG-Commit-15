@@ -60,7 +60,9 @@
 
         <div class="carousel-grid-description-container">
           <div class="carousel-grid-description-container_h5">
-            <h5>blank</h5>
+            <% editAdmins.forEach(editadmin => { %>
+            <h5><%= editadmin.name %></h5>
+            <% }) %>
           </div>
           <div class="carousel-grid-description-container_h2">
             <h2>PASS REQUEST</h2>
